@@ -15,7 +15,7 @@ public class HitWall : MonoBehaviour
     public GameObject Eria9;
     public GameObject Eria10;
     static public bool isEnemy;
-    static public bool isFlower;
+    //static public bool isFlower;
     public Vector3 FlowerPosition { get; private set; }
     // Start is called before the first frame update
     void Start()
@@ -68,13 +68,14 @@ public class HitWall : MonoBehaviour
         {
             isEnemy = true;
             Debug.Log("aaa");
-        }
-        else if (other.gameObject.CompareTag("Flower"))
+        }*/
+        if (other.gameObject.CompareTag("Flower"))
         {
-            isFlower = true;
+            //isFlower = true;
             Vector3 flowerPosition = other.gameObject.transform.position;
             FlowerPosition = flowerPosition;
-        }*/
+            //Debug.Log(isFlower);  
+        }
     }
     public void OnTriggerExit2D(Collider2D other)
     {
