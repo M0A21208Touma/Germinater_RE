@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2867834384280596585}
   - component: {fileID: 2824491305240172575}
   - component: {fileID: 7509714050017786470}
+  - component: {fileID: 4127224824337370722}
   m_Layer: 0
   m_Name: Magic_R
   m_TagString: Untagged
@@ -74,9 +75,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.25023717, g: 0.5754717, b: 0.04705111, a: 1}
+  m_Color: {r: 0.2507338, g: 0.6509434, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,3 +124,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4127224824337370722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7831234137767446749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250c139b6fffec44cb39fff543491882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wind: {fileID: 125751645209329832, guid: f49e381075f68164e97ccca23fe97ccd, type: 3}

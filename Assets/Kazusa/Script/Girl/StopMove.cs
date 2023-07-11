@@ -24,11 +24,11 @@ public class StopMove : MonoBehaviour
         {
             isStop = false;
         }*/
-        if ((sa.isAttack == true && isFlower == false)|| se.isEnemy==true)
+        if (isFlower == true || se.isEnemy==true)
         {
             isStop = true;
         }
-        else if ((sa.isAttack == false && isFlower == false)&& se.isEnemy == false)
+        else if ((/*sa.isAttack == false&&*/  isFlower == false)&& se.isEnemy == false)
         {
             isStop = false;
         }
