@@ -6,8 +6,8 @@ using TMPro;
 
 public class Gamemanager : MonoBehaviour
 {
-    public TextMeshProUGUI goalText;		//　Text型の変数goalTextを用意します	
-    public TextMeshProUGUI gameOverText;        //　Text型の変数goalTextを用意します	
+    public GameObject goalText;		//　Text型の変数goalTextを用意します	
+    public GameObject gameOverText;        //　Text型の変数goalTextを用意します	
     public GameObject Replay;
    private GoalCheck gc;
     private StopMove sm;
@@ -42,7 +42,7 @@ public class Gamemanager : MonoBehaviour
    
     public void GoalFlag()			//　他のクラスからアクセス可能なpublicのGaolFlag()というメソッドをつくりました　
     {
-        goalText.gameObject.SetActive(true);        //　SetActiveをtrueにするだけのメソッドです	
+        goalText.SetActive(true);        //　SetActiveをtrueにするだけのメソッドです	
         //inGame = false;
         // audioSource.PlayOneShot(sound03);
         Replay.SetActive(true);
@@ -51,7 +51,7 @@ public class Gamemanager : MonoBehaviour
 
     public void GameOverFlag()			//　他のクラスからアクセス可能なpublicのGaolFlag()というメソッドをつくりました　
     {
-        gameOverText.gameObject.SetActive(true);
+        gameOverText.SetActive(true);
         Replay.SetActive(true);
         //inGame = false;
         //audioSource.PlayOneShot(sound03);
