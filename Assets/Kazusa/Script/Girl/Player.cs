@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
                                         //public GameObject PlayerView;
     /* [SerializeField]
      ClickToVisualize ctv;*/
-    private Animator animator;
 
     private void Start()
     {
@@ -30,7 +29,6 @@ public class Player : MonoBehaviour
         se = FindObjectOfType<SearchErea>();
         // 初期の回転を保存
         initialRotation = targetObject.rotation;
-        animator = GetComponent<Animator>();
     }
 
 
@@ -49,7 +47,6 @@ public class Player : MonoBehaviour
             Vector3 toDirection = se.FlowerPosition - player.transform.position;
             // 対象物へ回転する
             transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
-            animator.SetBool("isWalk", true); // アニメーション切り替え
         }
         else if (sa.isView == true && sm.isStop == false)
         {
@@ -57,12 +54,10 @@ public class Player : MonoBehaviour
             Vector3 toDirection = sa.mousePosition - player.transform.position;
             // 対象物へ回転する
             transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
-            animator.SetBool("isWalk", true); // アニメーション切り替え
         }
         else
         {
-            animator.SetBool("isWalk", false); // アニメーション切り替え
-            Debug.Log("ddd");
+
         }
         /*else
         {

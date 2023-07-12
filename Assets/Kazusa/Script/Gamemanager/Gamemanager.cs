@@ -20,8 +20,8 @@ public class Gamemanager : MonoBehaviour
         gc = FindObjectOfType<GoalCheck>();
         sm = FindObjectOfType<StopMove>();
         pw = FindObjectOfType<PoisonWave>();
-        goalText.gameObject.SetActive(false);
-        gameOverText.gameObject.SetActive(false);
+        goalText.SetActive(false);
+        gameOverText.SetActive(false);
         Time.timeScale = 0.0f;
         Replay.SetActive(false);
     }
