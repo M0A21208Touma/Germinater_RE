@@ -897,11 +897,10 @@ MonoBehaviour:
   currentPosition: {x: 0, y: 0, z: 0}
   attackspeed: 10
   magic_g: {fileID: 7831234137767446749, guid: c63c2409e0730e24287aaeaee23dbaec, type: 3}
-  Girl: {fileID: 1173745571}
+  Girl: {fileID: 0}
   delaySeconds: 1
-  rapidTime: 1
-  rapid: 100
-  oriRapid: 0
+  rapidTime: 0
+  rapid: 0
 --- !u!58 &214604926
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7615,6 +7614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2126063685}
   targetObject: {fileID: 1173745579}
+  odoroki: {fileID: 0}
 --- !u!50 &2126063690
 Rigidbody2D:
   serializedVersion: 4
@@ -7635,7 +7635,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!58 &2126063691
 CircleCollider2D:
   m_ObjectHideFlags: 0

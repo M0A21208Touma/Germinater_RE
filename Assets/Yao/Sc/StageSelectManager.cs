@@ -38,7 +38,7 @@ public class StageSelectManager : MonoBehaviour
             stage1Text.color = color;
             if (Input.GetMouseButtonDown(0))
             {
-                Debug.Log("Stage1");//§≥§≥§«•∑©`•Ûﬂw“∆
+                Debug.Log("Stage1");//§≥§≥§«•∑©`•Ûﬂw“∆!
                 SceneManager.LoadScene("Kazusa_Demo");
             }
         }
