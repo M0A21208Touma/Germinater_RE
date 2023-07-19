@@ -17,7 +17,6 @@ public class ImageScript1 : MonoBehaviour
     private void Update()
     {
         fillAmount = SpilitAction.oriRapid / 60;
-        Debug.Log(fillAmount);
         // Fill Amountを制御する処理を記述する
         // fillAmountの値を変更することでFill Amountが更新される
         // 0から1の範囲内の値を指定する

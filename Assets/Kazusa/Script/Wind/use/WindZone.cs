@@ -14,7 +14,7 @@ public class WindZone : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Wind"))
         {
@@ -32,18 +32,17 @@ public class WindZone : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isInWindZone)
+        if (isInWindZone && rb.velocity == Vector2.zero)
         {
             Vector2 windDirection = transform.position - GameObject.FindGameObjectWithTag("Girl").transform.position;
-            Debug.Log(windDirection);
             rb.AddForce(windDirection.normalized * windForce, ForceMode2D.Force);
-            rb.velocity *= (1f - windDeceleration * Time.fixedDeltaTime);
-
-            if (rb.velocity.magnitude < minSpeed)
+            //rb.velocity *= (1f - windDeceleration * Time.fixedDeltaTime);
+            isInWindZone = false;
+            /*if (rb.velocity.magnitude < minSpeed)
             {
                 // ‘¬“x‚ªˆê’èˆÈ‰º‚É‚È‚Á‚½‚ç”ò‚Î‚È‚­‚È‚é
                 rb.velocity = Vector2.zero;
-            }
+            }*/
         }
         else
         {
