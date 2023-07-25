@@ -47,10 +47,13 @@ public class Player : MonoBehaviour
         }*/
         if (se.isFlower == true)
         {
-            player.transform.position = Vector3.MoveTowards(player.transform.position, se.FlowerPosition, speed * Time.deltaTime);
-            Vector3 toDirection = se.FlowerPosition - player.transform.position;
-            // ëŒè€ï®Ç÷âÒì]Ç∑ÇÈ
-            transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
+            if (LostFlower.inTouch == false)
+            {
+                player.transform.position = Vector3.MoveTowards(player.transform.position, se.FlowerPosition, speed * Time.deltaTime);
+                Vector3 toDirection = se.FlowerPosition - player.transform.position;
+                // ëŒè€ï®Ç÷âÒì]Ç∑ÇÈ
+                //transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
+            }
 
             StartCoroutine(ActivateOdoroki());
             isSee = true;
@@ -60,7 +63,7 @@ public class Player : MonoBehaviour
             player.transform.position = Vector3.MoveTowards(player.transform.position, sa.mousePosition, speed * Time.deltaTime);
             Vector3 toDirection =  player.transform.position - sa.mousePosition;
             // ëŒè€ï®Ç÷âÒì]Ç∑ÇÈ
-            transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
+           // transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
             StartCoroutine(ActivateOdoroki());
             isSee = true;
         }
@@ -69,7 +72,7 @@ public class Player : MonoBehaviour
             player.transform.position = Vector3.MoveTowards(player.transform.position, sa.mousePosition, speed * Time.deltaTime);
             Vector3 toDirection = sa.mousePosition - player.transform.position;
             // ëŒè€ï®Ç÷âÒì]Ç∑ÇÈ
-            transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
+            //transform.rotation = Quaternion.FromToRotation(Vector3.up, toDirection);
 
             isSee = false;
         }

@@ -7,6 +7,7 @@ public class ImageScript1 : MonoBehaviour
 {
     public Image image;
     public float fillAmount;
+    public GameObject Gage;
 
     private void Start()
     {
@@ -21,5 +22,13 @@ public class ImageScript1 : MonoBehaviour
         // fillAmountの値を変更することでFill Amountが更新される
         // 0から1の範囲内の値を指定する
         image.fillAmount = fillAmount;
+        if(fillAmount >= 1.0f)
+        {
+            Gage.SetActive(false);
+        }
+        else
+        {
+            Gage.SetActive(true);
+        }
     }
 }

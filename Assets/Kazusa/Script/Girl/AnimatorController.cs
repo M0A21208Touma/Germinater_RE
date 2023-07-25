@@ -28,10 +28,21 @@ public class AnimatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (se.isFlower || sa.isView && !sm.isStop)
         {
-           
-            if((PositionCheck.angle > 0 && PositionCheck.angle <= 60) || (PositionCheck.angle >= -60 && PositionCheck.angle <= 0))
+            if (LostFlower.inTouch)
+            {
+                animator.SetBool(walkR, false);
+                animator.SetBool(walkL, false);
+                animator.SetBool(walkF, false);
+                animator.SetBool(walkB, false);
+                animator.SetBool(stopR, false);
+                animator.SetBool(stopL, false);
+                animator.SetBool(stopF, false);
+                animator.SetBool(stopB, false);
+            }
+             else if ((PositionCheck.angle > 0 && PositionCheck.angle <= 60) || (PositionCheck.angle >= -60 && PositionCheck.angle <= 0))
             {
                 animator.SetBool(walkR, true);
                 animator.SetBool(walkL, false);

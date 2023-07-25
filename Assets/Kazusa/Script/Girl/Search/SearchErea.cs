@@ -16,6 +16,7 @@ public class SearchErea : MonoBehaviour
     {
         pl = FindObjectOfType<Player>();
         isEnemy = false;
+        isFlower = false;
         isEnemyS = false;
         isEnemyS = false;
         SoundCount = 0;
@@ -53,6 +54,7 @@ public class SearchErea : MonoBehaviour
         else if (other.gameObject.CompareTag("Flower"))
         {
             isFlower = false;
+            LostFlower.inTouch = false;
             SoundCount = 0;
         }
     }
