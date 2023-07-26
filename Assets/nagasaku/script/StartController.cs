@@ -7,6 +7,6 @@ public class StartController : MonoBehaviour
 {
     public void SwitchScene()
     {
-        SceneManager.LoadScene("Kazusa_Demo", LoadSceneMode.Single);
+        SceneManager.LoadScene("StageSelect", LoadSceneMode.Single);
     }
 }

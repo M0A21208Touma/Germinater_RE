@@ -57,7 +57,7 @@ public class StageSelectManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Stage2");
-                //§≥§≥§«•∑©`•Ûﬂw“∆
+                SceneManager.LoadScene("Stage2");
             }
         }
         if (collision.gameObject.name == "Stage3")
@@ -75,7 +75,7 @@ public class StageSelectManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Stage3");
-                //§≥§≥§«•∑©`•Ûﬂw“∆
+                SceneManager.LoadScene("Stage3");
             }
         }
     }
