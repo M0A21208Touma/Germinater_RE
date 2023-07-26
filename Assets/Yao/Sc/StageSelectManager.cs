@@ -26,13 +26,13 @@ public class StageSelectManager : MonoBehaviour
     {
         if (collision.gameObject.name == "Stage1")
         {
-            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤ë
+            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤E
         _time += Time.deltaTime;
-            // ÖÜÆÚcycle¤ÇÀR¤ê·µ¤¹‚¤ÎÈ¡µÃ
-            // 0¡«cycle¤Î¹ ‡ì¤Î‚¤¬µÃ¤é¤ì¤ë
+            // ÖÜÆÚcycle¤ÇÀR¤Eµ¤¹‚¤ÎÈ¡µÃ
+            // 0¡«cycle¤Î¹ E¤Î‚¤¬µÃ¤é¤EE
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
-            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤ëÃ÷œç×´‘B¤ò·´Ó³
-            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥ë¥Õ¥¡‚¤ò‰ä¸ü¤·¤Æ¤¤¤ë
+            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤E÷œç×´‘B¤ò·´Ó³
+            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥EÕ¥¡‚¤ò‰ä¸E·¤Æ¤¤¤E
             var color = stage1Text.color;
             color.a = alpha;
             stage1Text.color = color;
@@ -44,13 +44,13 @@ public class StageSelectManager : MonoBehaviour
         }
         if (collision.gameObject.name == "Stage2")
         {
-            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤ë
+            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤E
             _time += Time.deltaTime;
-            // ÖÜÆÚcycle¤ÇÀR¤ê·µ¤¹‚¤ÎÈ¡µÃ
-            // 0¡«cycle¤Î¹ ‡ì¤Î‚¤¬µÃ¤é¤ì¤ë
+            // ÖÜÆÚcycle¤ÇÀR¤Eµ¤¹‚¤ÎÈ¡µÃ
+            // 0¡«cycle¤Î¹ E¤Î‚¤¬µÃ¤é¤EE
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
-            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤ëÃ÷œç×´‘B¤ò·´Ó³
-            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥ë¥Õ¥¡‚¤ò‰ä¸ü¤·¤Æ¤¤¤ë
+            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤E÷œç×´‘B¤ò·´Ó³
+            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥EÕ¥¡‚¤ò‰ä¸E·¤Æ¤¤¤E
             var color = stage2Text.color;
             color.a = alpha;
             stage2Text.color = color;
@@ -62,13 +62,13 @@ public class StageSelectManager : MonoBehaviour
         }
         if (collision.gameObject.name == "Stage3")
         {
-            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤ë
+            // ÄÚ²¿•r¿Ì¤ò½Uß^¤µ¤»¤E
             _time += Time.deltaTime;
-            // ÖÜÆÚcycle¤ÇÀR¤ê·µ¤¹‚¤ÎÈ¡µÃ
-            // 0¡«cycle¤Î¹ ‡ì¤Î‚¤¬µÃ¤é¤ì¤ë
+            // ÖÜÆÚcycle¤ÇÀR¤Eµ¤¹‚¤ÎÈ¡µÃ
+            // 0¡«cycle¤Î¹ E¤Î‚¤¬µÃ¤é¤EE
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
-            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤ëÃ÷œç×´‘B¤ò·´Ó³
-            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥ë¥Õ¥¡‚¤ò‰ä¸ü¤·¤Æ¤¤¤ë
+            // ÄÚ²¿•r¿Ìtime¤Ë¤ª¤±¤E÷œç×´‘B¤ò·´Ó³
+            // ¥¹¥×¥é¥¤¥ÈÉ«¤Î¥¢¥EÕ¥¡‚¤ò‰ä¸E·¤Æ¤¤¤E
             var color = stage3Text.color;
             color.a = alpha;
             stage3Text.color = color;
