@@ -6,51 +6,53 @@ using UnityEngine.UI;
 
 public class OpeningManager : MonoBehaviour
 {
-   public Sprite o1;
-   public Sprite o2;
-   public Sprite o3;
-   public Sprite o4;
-   public Sprite o5;
-   public Sprite o6;
+    public Sprite o1;
+    public Sprite o2;
+    public Sprite o3;
+    public Sprite o4;
+    public Sprite o5;
+    public Sprite o6;
     public Text Openingtext;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-          
+
     }
     public void One()
     {
         GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o1;
-        Openingtext.text = "はるか昔に、この世界は世界樹に守られてきた。";
-    }  public void Two()
+        Openingtext.text = "偼傞偐愄偵丄偙偺悽奅偼悽奅庽偵庣傜傟偰偒偨丅";
+    }
+    public void Two()
     {
         GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o2;
-        Openingtext.text = "けど、急に世界樹の暴走により、森全体に毒霧が蔓延し、動物たちも混乱し始めた";
-    } public void Three()
+        Openingtext.text = "偗偳丄媫偵悽奅庽偺朶憱偵傛傝丄怷慡懱偵撆柖偑枲墑偟丄摦暔偨偪傕崿棎偟巒傔偨";
+    }
+    public void Three()
     {
         GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o3;
-        Openingtext.text = "世界樹の僅かな善意識の指示により、精霊リットが作り出され";
+        Openingtext.text = "悽奅庽偺嬐偐側慞堄幆偺巜帵偵傛傝丄惛楈儕僢僩偑嶌傝弌偝傟";
     }
     public void Four()
     {
         GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o4;
-        Openingtext.text = " 「リーツ」という少女がすべてを戻される力を持って、その子を世界樹へ導くことを任された";
+        Openingtext.text = " 乽儕乕僣乿偲偄偆彮彈偑偡傋偰傪栠偝傟傞椡傪帩偭偰丄偦偺巕傪悽奅庽傊摫偔偙偲傪擟偝傟偨";
     }
     public void Five()
     {
         GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o5;
-        Openingtext.text = "リットとリーツが出会い、世界樹の暴走をとめるため世界樹の中心へと向かうのであった。";
+        Openingtext.text = "儕僢僩偲儕乕僣偑弌夛偄丄悽奅庽偺朶憱傪偲傔傞偨傔悽奅庽偺拞怱傊偲岦偐偆偺偱偁偭偨丅";
     }
- 
+
     public void Skip()
     {
         SceneManager.LoadScene("StageSelect");
     }
-    }
+}
 

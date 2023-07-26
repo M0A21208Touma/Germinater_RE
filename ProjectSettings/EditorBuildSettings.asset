@@ -5,16 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Kazusa/Scenes 1/Kazusa_Demo.unity
-    guid: 1deec052bd25fe746a14691deb27192c
+    path: Assets/nagasaku/Scene/TitleScene.unity
+    guid: 3027723a1675cfe4ebddddd5f4e7c998
+  - enabled: 1
+    path: Assets/nagasaku/Scene/GameOperation.unity
+    guid: c8ab48548ed39c7468ea58b88b1dbe90
+  - enabled: 1
+    path: Assets/nagasaku/Scene/GameOperation2.unity
+    guid: 266239e60c7928c448c9d42684a0f7ff
+  - enabled: 1
+    path: Assets/Yao/Yao_Scene/Opening.unity
+    guid: 592c88f6270940e40970be3fa85c2662
   - enabled: 1
     path: Assets/Yao/Yao_Scene/StageSelect.unity
     guid: 2644d6451ba3cb34bbe2c781d98b32cf
   - enabled: 1
-    path: Assets/Yao/Yao_Scene/Opening.unity
-    guid: 592c88f6270940e40970be3fa85c2662
+    path: Assets/Kazusa/Scenes 1/Kazusa_Demo.unity
+    guid: 1deec052bd25fe746a14691deb27192c
+  - enabled: 1
+    path: Assets/Kazusa/Scenes 1/stage2.unity
+    guid: a798f710088e9f844b1b120624245c2c
+  - enabled: 1
+    path: Assets/Kazusa/Scenes 1/stage3.unity
+    guid: d1ad703c7b6dda742b9e8aa11ade14c6
   m_configObjects: {}
