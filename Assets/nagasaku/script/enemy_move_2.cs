@@ -17,6 +17,8 @@ public class enemy_move_2 : MonoBehaviour
     private float freezeDuration = 3f;
     private float freezeTimer;
 
+    public static bool isMove;
+
     private void Start()
     {
         // プレイヤーを見つけるためのタグ "Player" を持つオブジェクトを検索
@@ -25,6 +27,7 @@ public class enemy_move_2 : MonoBehaviour
         {
             player = playerObject.transform;
         }
+        isMove = false;
     }
 
     private void Update()
@@ -51,6 +54,7 @@ public class enemy_move_2 : MonoBehaviour
             {
                 // プレイヤーが検知範囲外の場合
                 playerDetected = false;
+                isMove = false;
             }
         }
         if (isFrozen)
@@ -87,6 +91,7 @@ public class enemy_move_2 : MonoBehaviour
 
     private void ChargeForward()
     {
+        isMove = true;
         // 突進する距離に到達するまで前進
         transform.position += transform.up * movementSpeed * Time.deltaTime;
 

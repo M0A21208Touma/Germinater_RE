@@ -63,6 +63,7 @@ public class AnimatorController : MonoBehaviour
                 animator.SetBool(stopL, false);
                 animator.SetBool(stopF, false);
                 animator.SetBool(stopB, false);
+                Debug.Log("fff");
             }
             else if (PositionCheck.angle > -120 && PositionCheck.angle < -60)
             {
