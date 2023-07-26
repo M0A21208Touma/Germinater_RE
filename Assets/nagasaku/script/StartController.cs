@@ -7,6 +7,6 @@ public class StartController : MonoBehaviour
 {
     public void SwitchScene()
     {
-        SceneManager.LoadScene("StageSelect", LoadSceneMode.Single);
+        SceneManager.LoadScene("Opening", LoadSceneMode.Single);
     }
 }
