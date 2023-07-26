@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kazusa/Scenes 1/Kazusa_Demo.unity
     guid: 1deec052bd25fe746a14691deb27192c
+  - enabled: 1
+    path: Assets/Yao/Yao_Scene/StageSelect.unity
+    guid: 2644d6451ba3cb34bbe2c781d98b32cf
+  - enabled: 1
+    path: Assets/Yao/Yao_Scene/Opening.unity
+    guid: 592c88f6270940e40970be3fa85c2662
   m_configObjects: {}
