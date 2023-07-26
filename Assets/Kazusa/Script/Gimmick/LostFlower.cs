@@ -22,8 +22,6 @@ public class LostFlower : MonoBehaviour
         if (other.gameObject.tag == "Wind")
         { 
             Destroy(this.gameObject);
-            Debug.Log("fff");
-
         }
         if (other.gameObject.tag == "Girl")
         {
