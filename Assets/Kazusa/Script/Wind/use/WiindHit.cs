@@ -23,7 +23,6 @@ public class WiindHit : MonoBehaviour
             // 2秒後にWindオブジェクトを破棄
             Destroy(wind, 2f);
             isWind = true;
-            Debug.Log("ggg");
         }
     }
 }
