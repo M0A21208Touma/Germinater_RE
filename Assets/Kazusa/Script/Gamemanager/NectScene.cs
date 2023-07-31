@@ -10,7 +10,7 @@ public class NectScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        iLevel = SceneManager.GetActiveScene().buildIndex; 　　//変数iLevelに現在のLevelのindex番号を取り込みます
+        iLevel = SceneManager.GetActiveScene().buildIndex; //変数iLevelに現在のLevelのindex番号を取り込みます
     }
 
     // Update is called once per frame
@@ -21,6 +21,6 @@ public class NectScene : MonoBehaviour
     public void NextScene()                                // 次のシーンに進めるメソッドです
     {
         iLevel++;                                                       //　変数iLevelに1を足します
-        SceneManager.LoadScene(iLevel);　　//　次のレベルシーンをロードします
+        SceneManager.LoadScene(iLevel);//　次のレベルシーンをロードします
     }
 }

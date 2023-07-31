@@ -6,48 +6,53 @@ using UnityEngine.UI;
 
 public class OpeningManager : MonoBehaviour
 {
-    public Sprite o1;
-    public Sprite o2;
-    public Sprite o3;
-    public Sprite o4;
-    public Sprite o5;
-    public Sprite o6;
+    Transform tf; //Main CameraのTransform
+    private float x = 21.2f;
+    public Text dialogueText; // セリフを表示するテキストUI
+    public string[] dialogues; // セリフの配列
+    private int currentDialogueIndex = 0; // 現在表示しているセリフのインデックス
     public Text Openingtext;
 
     void Start()
     {
-
+        tf = this.gameObject.GetComponent<Transform>(); //Main CameraのTransformを取得する。                                                     
+        ShowDialogue(); // 最初のセリフを表示
     }
 
     // Update is called once per frame
     void Update()
     {
+         float X= this.gameObject.GetComponent<Transform>().position.x;
+        if (Input.GetMouseButtonDown(0))
+        {
+            tf.position = new Vector3(X+x, 0.0f,-10f);
+        }
 
+        // 左クリックされたら次のセリフを表示
+        if (Input.GetMouseButtonDown(0))
+        {
+            currentDialogueIndex++;
+            // セリフをすべて表示した場合、ダイアログを非表示にする
+            if (currentDialogueIndex >= dialogues.Length)
+            {
+                HideDialogue();
+            }
+            else
+            {
+                ShowDialogue();
+            }
+        }
     }
-    public void One()
+    private void ShowDialogue()
     {
-        GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o1;
-        Openingtext.text = "偼傞偐愄偵丄偙偺悽奅偼悽奅庽偵庣傜傟偰偒偨丅";
+        // セリフを表示
+        dialogueText.text = dialogues[currentDialogueIndex];
     }
-    public void Two()
+
+    private void HideDialogue()
     {
-        GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o2;
-        Openingtext.text = "偗偳丄媫偵悽奅庽偺朶憱偵傛傝丄怷慡懱偵撆柖偑枲墑偟丄摦暔偨偪傕崿棎偟巒傔偨";
-    }
-    public void Three()
-    {
-        GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o3;
-        Openingtext.text = "悽奅庽偺嬐偐側慞堄幆偺巜帵偵傛傝丄惛楈儕僢僩偑嶌傝弌偝傟";
-    }
-    public void Four()
-    {
-        GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o4;
-        Openingtext.text = " 乽儕乕僣乿偲偄偆彮彈偑偡傋偰傪栠偝傟傞椡傪帩偭偰丄偦偺巕傪悽奅庽傊摫偔偙偲傪擟偝傟偨";
-    }
-    public void Five()
-    {
-        GameObject.Find("opening").GetComponent<SpriteRenderer>().sprite = o5;
-        Openingtext.text = "儕僢僩偲儕乕僣偑弌夛偄丄悽奅庽偺朶憱傪偲傔傞偨傔悽奅庽偺拞怱傊偲岦偐偆偺偱偁偭偨丅";
+        // ダイアログを非表示にする（例えばテキストをクリアする）
+        dialogueText.text = "";
     }
 
     public void Skip()
