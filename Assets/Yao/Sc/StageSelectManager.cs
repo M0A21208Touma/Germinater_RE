@@ -28,7 +28,7 @@ public class StageSelectManager : MonoBehaviour
         {
             // ﾄﾚｲｿ瓶ｿﾌ､Uﾟ^､ｵ､ｻ､・
         _time += Time.deltaTime;
-            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵﾃ
+            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵ?
             // 0｡ｫcycle､ﾎｹ・､ﾎｎ､ｬｵﾃ､鬢・・
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
             // ﾄﾚｲｿ瓶ｿﾌtime､ﾋ､ｪ､ｱ､・釋ｴ腺､ｴﾓｳ
@@ -46,7 +46,7 @@ public class StageSelectManager : MonoBehaviour
         {
             // ﾄﾚｲｿ瓶ｿﾌ､Uﾟ^､ｵ､ｻ､・
             _time += Time.deltaTime;
-            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵﾃ
+            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵ?
             // 0｡ｫcycle､ﾎｹ・､ﾎｎ､ｬｵﾃ､鬢・・
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
             // ﾄﾚｲｿ瓶ｿﾌtime､ﾋ､ｪ､ｱ､・釋ｴ腺､ｴﾓｳ
@@ -64,7 +64,7 @@ public class StageSelectManager : MonoBehaviour
         {
             // ﾄﾚｲｿ瓶ｿﾌ､Uﾟ^､ｵ､ｻ､・
             _time += Time.deltaTime;
-            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵﾃ
+            // ﾖﾜﾆﾚcycle､ﾇﾀR､・ｵ､ｹｎ､ﾎﾈ｡ｵ?
             // 0｡ｫcycle､ﾎｹ・､ﾎｎ､ｬｵﾃ､鬢・・
             var alpha = Mathf.Cos((float)(2 * Mathf.PI * _time / _cycle)) * 0.5f + 0.5f;
             // ﾄﾚｲｿ瓶ｿﾌtime､ﾋ､ｪ､ｱ､・釋ｴ腺､ｴﾓｳ
