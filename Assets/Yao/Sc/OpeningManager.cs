@@ -8,15 +8,15 @@ public class OpeningManager : MonoBehaviour
 {
     Transform tf; //Main Camera§ŒTransform
     private float x = 21.2f;
-    public Text dialogueText; // •ª•Í•’§Ú±Ì æ§π§Î•∆•≠•π•»UI
-    public string[] dialogues; // •ª•Í•’§Œ≈‰¡–
-    private int currentDialogueIndex = 0; // ¨F‘⁄±Ì æ§∑§∆§§§Î•ª•Í•’§Œ•§•Û•«•√•Ø•π
+    public Text dialogueText; // •ª•ÅE’§Ú±˙Êæ§π§ÅE∆•≠•π•»UI
+    public string[] dialogues; // •ª•ÅE’§Œ≈‰¡–
+    private int currentDialogueIndex = 0; // ¨F‘⁄±˙Êæ§∑§∆§§§ÅEª•ÅE’§Œ•§•Û•«•√•Ø•π
     public Text Openingtext;
 
     void Start()
     {
-        tf = this.gameObject.GetComponent<Transform>(); //Main Camera§ŒTransform§Ú»°µ√§π§Î°£                                                     
-        ShowDialogue(); // ◊Ó≥ı§Œ•ª•Í•’§Ú±Ì æ
+        tf = this.gameObject.GetComponent<Transform>(); //Main Camera§ŒTransform§Ú»°µ√§π§ÅE£                                                     
+        ShowDialogue(); // ◊˚œı§Œ•ª•ÅE’§Ú±˙Êæ
     }
 
     // Update is called once per frame
@@ -28,11 +28,11 @@ public class OpeningManager : MonoBehaviour
             tf.position = new Vector3(X+x, 0.0f,-10f);
         }
 
-        // ◊Û•Ø•Í•√•Ø§µ§Ï§ø§È¥Œ§Œ•ª•Í•’§Ú±Ì æ
+        // ◊Û•Ø•ÅE√•Ø§µ§ÅEø§È¥Œ§Œ•ª•ÅE’§Ú±˙Êæ
         if (Input.GetMouseButtonDown(0))
         {
             currentDialogueIndex++;
-            // •ª•Í•’§Ú§π§Ÿ§∆±Ì æ§∑§øàˆ∫œ°¢•¿•§•¢•Ì•∞§Ú∑«±Ì æ§À§π§Î
+            // •ª•ÅE’§Ú§π§Ÿ§∆±˙Êæ§∑§øàˆ∫œ°¢•¿•§•¢•˙¡∞§Ú∑«±˙Êæ§À§π§ÅE
             if (currentDialogueIndex >= dialogues.Length)
             {
                 HideDialogue();
@@ -45,13 +45,13 @@ public class OpeningManager : MonoBehaviour
     }
     private void ShowDialogue()
     {
-        // •ª•Í•’§Ú±Ì æ
+        // •ª•ÅE’§Ú±˙Êæ
         dialogueText.text = dialogues[currentDialogueIndex];
     }
 
     private void HideDialogue()
     {
-        // •¿•§•¢•Ì•∞§Ú∑«±Ì æ§À§π§Î£®¿˝§®§–•∆•≠•π•»§Ú•Ø•Í•¢§π§Î£©
+        // •¿•§•¢•˙¡∞§Ú∑«±˙Êæ§À§π§ÅE®¿˝§®§–•∆•≠•π•»§Ú•Ø•ÅE¢§π§ÅE©
         dialogueText.text = "";
     }
 
