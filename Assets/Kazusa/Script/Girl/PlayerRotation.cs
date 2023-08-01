@@ -50,6 +50,14 @@ public class PlayerRotation : MonoBehaviour
 
             isSee = true;
         }
+        else if (sa.isBack == true)
+        {
+            Vector3 toDirection = sa.mousePosition - player.transform.position;
+
+            transform.rotation = Quaternion.FromToRotation(Vector3.right, toDirection);
+            sa.isBack = true;
+            Debug.Log("222");
+        }
         else if (sa.isView == true && sm.isStop == false)
         {
             Vector3 toDirection = sa.mousePosition - player.transform.position;
@@ -58,10 +66,7 @@ public class PlayerRotation : MonoBehaviour
 
             isSee = false;
         }
-        else
-        {
-
-        }
+        
         /*else
         {
             Vector3 toDirection = sa.mousePosition - player.transform.position;

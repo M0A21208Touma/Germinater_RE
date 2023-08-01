@@ -6,6 +6,7 @@ public class SpilitAction : MonoBehaviour
 {
     private Camera mainCamera;
     public bool isView;
+    public bool isBack;
     public Vector3 mousePosition;
     //public bool isAttack;
     public int count;
@@ -30,6 +31,7 @@ public class SpilitAction : MonoBehaviour
     {
         mainCamera = Camera.main;
         isView = false;
+        isBack = false;
         //isAttack = false;
         count = 0;
         //followSp.SetActive(false);
@@ -40,6 +42,7 @@ public class SpilitAction : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(SearchErea.isEneStop);
         mousePosition = GetMouseWorldPosition();
         oriRapid += rapidTime;                                   //•Ï”oriRapid‚©‚ç•Ï”rapidTime‚Ì’l‚ğˆø‚¢‚ÄA‚Ü‚½•Ï”oriRapid‚É–ß‚µ‚Ü‚·
         //—d¸‚Ì“®‚«
@@ -76,18 +79,29 @@ public class SpilitAction : MonoBehaviour
         if(other.gameObject.tag == "Start")
         {
             Time.timeScale = 1f;
-            Debug.Log("ddd");
+        }
+        else if (other.gameObject.tag == "Back")
+        {
+            isBack = true;
+            SearchErea.isEneStop = false;
+            Debug.Log("jjj");
         }
         else if (other.gameObject.tag == "View")
         {
             isView = true;
+            SearchErea.isEneStop = false;
         }
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "View")
         {
             isView = false;
+        }
+        else if (other.gameObject.tag == "Back")
+        {
+            isBack = false;
         }
     }
     private Vector3 GetMouseWorldPosition()

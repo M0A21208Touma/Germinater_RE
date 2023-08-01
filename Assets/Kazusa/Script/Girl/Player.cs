@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
 
             isSee = false;
         }
+       
         else
         {
 
