@@ -17,14 +17,14 @@ public class numa : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Girl")
+        if (collision.gameObject.tag == "foot")
         {
             Player.speed = 1;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Girl")
+        if (collision.gameObject.tag == "foot")
         {
             Player.speed = 5;
         }
