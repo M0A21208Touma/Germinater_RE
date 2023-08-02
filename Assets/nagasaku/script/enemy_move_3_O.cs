@@ -54,7 +54,11 @@ public class enemy_move_3_O : MonoBehaviour
             {
                 // 敵の位置から指定した距離だけ離れた位置にプレハブを生成
                 Vector3 spawnPosition = transform.position + transform.right * spawnDistance;
-                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+                GameObject spawnedPrefab = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+                // プレハブをY軸に180度回転
+                spawnedPrefab.transform.Rotate(0f, 180f, 0f);
+                Debug.Log("Spawn");
                 hasSpawnedPrefab = true;
             }
 
