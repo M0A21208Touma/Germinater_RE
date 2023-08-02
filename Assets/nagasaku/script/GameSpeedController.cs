@@ -32,6 +32,7 @@ public class GameSpeedController : MonoBehaviour
 
         if (isGamePaused && Input.GetKeyDown(KeyCode.Return))
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(targetSceneName); // エンターキーで指定のシーンに遷移
         }
     }
