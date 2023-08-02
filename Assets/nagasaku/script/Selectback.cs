@@ -8,6 +8,7 @@ public class Selectback : MonoBehaviour
     // Start is called before the first frame update
     public void SwitchScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("StageSelect", LoadSceneMode.Single);
     }
 }

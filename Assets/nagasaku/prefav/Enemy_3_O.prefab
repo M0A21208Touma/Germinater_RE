@@ -57,10 +57,10 @@ GameObject:
   - component: {fileID: 5244440409408244072}
   - component: {fileID: 5244440409408244086}
   - component: {fileID: 5244440409408244084}
-  - component: {fileID: 5244440409408244075}
   - component: {fileID: 5244440409408244074}
   - component: {fileID: 5244440409408244073}
   - component: {fileID: 5244440409408244080}
+  - component: {fileID: 3047528925572001085}
   m_Layer: 0
   m_Name: Enemy_3_O
   m_TagString: Enemy
@@ -157,25 +157,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5244440409408244075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5244440409408244079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bac5fda5590999841aa64032892c3d10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  detectionRange: 15
-  targetx1: 5
-  targety1: 7
-  targetx2: -3
-  targety2: -2
-  girl: {fileID: 0}
 --- !u!114 &5244440409408244074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,3 +200,24 @@ CapsuleCollider2D:
   m_Offset: {x: -5, y: 1}
   m_Size: {x: 15, y: 7}
   m_Direction: 1
+--- !u!114 &3047528925572001085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244440409408244079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62abd742ed85a5c4d961f0ba77d7bf79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  detectionRange: 5
+  targetx1: 0
+  targety1: 0
+  targetx2: 0
+  targety2: 0
+  girl: {fileID: 0}
+  prefabToSpawn: {fileID: 1606590612131161948, guid: 922c9c339ca1d774fb3363d399f9288c, type: 3}
+  spawnDistance: 20
