@@ -9,6 +9,7 @@ public class GameSpeedCon : MonoBehaviour
     public GameObject sT;
     private void Update()
     {
+        SpilitAction.inGame = false;
         if (Time.timeScale == 0f)
         {
             // マウスの位置を取得
@@ -19,6 +20,7 @@ public class GameSpeedCon : MonoBehaviour
             if (Vector3.Distance(mousePosition, targetPosition.position) < dist)
             {
                 Time.timeScale = 1f;
+                SpilitAction.inGame = true;
                 sT.gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }

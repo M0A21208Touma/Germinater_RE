@@ -7,6 +7,7 @@ public class SpilitAction : MonoBehaviour
     private Camera mainCamera;
     public bool isView;
     public bool isBack;
+    public static bool inGame;
     public Vector3 mousePosition;
     //public bool isAttack;
     public int count;
@@ -38,6 +39,7 @@ public class SpilitAction : MonoBehaviour
         //AttackSp.SetActive(false);
         oriRapid = 60;             //editorでrapidに入れた値をoriRapidに格納します
         isShoot = false;
+        inGame = true;
     }
 
     private void Update()
@@ -48,27 +50,29 @@ public class SpilitAction : MonoBehaviour
         //妖精の動き
         transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
         //currentPosition = transform.position;
-
-        //風の球射出
-        if (Input.GetMouseButtonDown(0))  // 左クリック
+        if (inGame == true)
         {
-            //transform.position = currentPosition;
-            //attackPoints.Add(mousePosition);  // クリックした位置を配列に追加
-            if (oriRapid >= rapid == true)     //もしrapidの値が０以下になったら、マウスボタンを押した時に弾が出るようになります
+            //風の球射出
+            if (Input.GetMouseButtonDown(0))  // 左クリック
             {
-                GameObject clone = Instantiate(magic_g, this.transform.position, Quaternion.identity);
-                //clones.Add(clone);  // 生成した球を配列に追加
+                //transform.position = currentPosition;
+                //attackPoints.Add(mousePosition);  // クリックした位置を配列に追加
+                if (oriRapid >= rapid == true)     //もしrapidの値が０以下になったら、マウスボタンを押した時に弾が出るようになります
+                {
+                    GameObject clone = Instantiate(magic_g, this.transform.position, Quaternion.identity);
+                    //clones.Add(clone);  // 生成した球を配列に追加
 
-                // 向きの生成（Z成分の除去と正規化）
-                Vector3 shotForward = Vector3.Scale((mousePosition - Girl.transform.position), new Vector3(1, 1, 0)).normalized;
+                    // 向きの生成（Z成分の除去と正規化）
+                    Vector3 shotForward = Vector3.Scale((mousePosition - Girl.transform.position), new Vector3(1, 1, 0)).normalized;
 
-                // 弾に速度を与える
-                clone.GetComponent<Rigidbody2D>().velocity = shotForward * attackspeed;
-                oriRapid = 0;               //　 rapidに元の値を入れて戻します　
+                    // 弾に速度を与える
+                    clone.GetComponent<Rigidbody2D>().velocity = shotForward * attackspeed;
+                    oriRapid = 0;               //　 rapidに元の値を入れて戻します　
 
-                // 2秒後にcloneを削除する
-                Destroy(clone, 2f);
-                isShoot = true;
+                    // 2秒後にcloneを削除する
+                    Destroy(clone, 2f);
+                    isShoot = true;
+                }
             }
         }
        
